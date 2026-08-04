@@ -136,7 +136,7 @@ Disciplina focada em arquitetura web, backend e persistência de dados.
 ## 🌐 Acesso aos Projetos
 
 Os projetos estão publicados em **GitHub Pages**:
-- 🔗 [GitHub Pages do Repositório](https://matt-carvalho117.github.io/IFTM-PWE/)
+- 🔗 [GitHub Pages do Repositório](https://matt-carvalho117.github.io/IFTM-SPI/)
 
 ## 🏷️ Tópicos
 
