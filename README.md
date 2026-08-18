@@ -13,7 +13,16 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
 - **PHP** e arquitetura MVC
 - **Bancos de dados** MySQL com PDO
 - **Web Design** e UX/UI
+  
+## 🎯 Objetivos
 
+- ✅ Dominar HTML5 semântico e acessibilidade
+- ✅ Criar layouts responsivos com CSS3
+- ✅ Entender arquitetura de aplicações web
+- ✅ Trabalhar com bancos de dados relacionais
+- ✅ Implementar padrões de design (MVC, Repository)
+- ✅ Garantir segurança em aplicações web
+- ✅ Desenvolver boas práticas de programação
 ## 💻 Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica de documentos web
@@ -67,72 +76,7 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
             └── schema.sql (Estrutura do banco de dados)
 ```
 
-### 🌐 **PWE - Projeto Web Estático**
-
-Disciplina focada em desenvolvimento frontend com HTML e CSS puros.
-
-**Estrutura:**
-- `aulas/` - Exercícios propostos durante as aulas
-- `listas/` - Listas de exercícios progressivas (09, 10, 14...)
-
-**Conceitos abordados:**
-- Estrutura semântica de HTML5
-- Propriedades CSS fundamentais (margin, padding, box-sizing)
-- Seletores CSS (element, class, ID, nth-child, ::nth-of-type)
-- Layouts com floats e posicionamento
-- Navegação e estrutura de listas
-- Background images e propriedades visuais
-
 ---
-
-### 🗄️ **FSI - Fundamentos de Sistemas para Internet**
-
-Disciplina focada em arquitetura web, backend e persistência de dados.
-
-**Estrutura do Projeto `cadastro-alunos`:**
-
-- **`public/`** - Ponto de entrada da aplicação e assets públicos
-  - `index.php` - Interface (View) para o usuário
-  - `salvar_contato.php` - Recebe requisições HTTP
-
-- **`config/`** - Configurações da aplicação
-  - `Database.php` - Classe de conexão com MySQL via PDO
-  - `bootstrap.php` - Carregamento automático de classes
-
-- **`app/Controllers/`** - Camada controladora
-  - Orquestra a requisição entre Services e Views
-
-- **`app/Services/`** - Lógica de negócios
-  - Valida dados de entrada
-  - Aplica regras de negócio
-
-- **`app/Repositories/`** - Acesso a dados
-  - Interage com o banco de dados
-  - Usa Prepared Statements para segurança
-
-- **`database/`** - Scripts do banco de dados
-  - `schema.sql` - Criação de tabelas
-
-**Conceitos abordados:**
-- Arquitetura MVC (Model-View-Controller)
-- Padrão Repository para acesso a dados
-- Service Layer para lógica de negócios
-- Conexão com MySQL usando PDO
-- Prepared Statements e prevenção de SQL Injection
-- Validação de dados no backend
-- Fluxo de requisições HTTP em aplicações web
-
----
-## 🎯 Objetivos
-
-- ✅ Dominar HTML5 semântico e acessibilidade
-- ✅ Criar layouts responsivos com CSS3
-- ✅ Entender arquitetura de aplicações web
-- ✅ Trabalhar com bancos de dados relacionais
-- ✅ Implementar padrões de design (MVC, Repository)
-- ✅ Garantir segurança em aplicações web
-- ✅ Desenvolver boas práticas de programação
-
 ## 🌐 Acesso aos Projetos
 
 Os projetos estão publicados em **GitHub Pages**:
