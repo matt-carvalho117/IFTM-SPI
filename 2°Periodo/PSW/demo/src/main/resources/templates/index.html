@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de Numeros</title>
+    <style>
+  body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .resultado {
+            margin-top: 30px;
+        }
+
+        .bola {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img th:src="@{megasena.png}" alt="">
+        <form th:action="@{/}" method="get">
+            <button type="submit">Gerar 6 Números</button>
+        </form>
+
+        <div class="resultado">
+            <h3>Números Sorteados:</h3>
+            <div th:each="num : ${numerosSorteados}" class="bola" th:text="${num}"></div>
+        </div>
+    </div>
+
+</body>
+</html>
