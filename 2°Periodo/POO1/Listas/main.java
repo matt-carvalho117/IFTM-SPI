@@ -190,17 +190,17 @@ public class main {
         int somaNegativos = 0;
 
         while (n != 0) {
-            if(n % 2 == 0){
+            if (n % 2 == 0) {
                 qtdPares++;
                 somaPares += n;
             } else {
                 qtdImpares++;
                 somaImpares += n;
             }
-            if(n > 0){
+            if (n > 0) {
                 qtdPositivos++;
                 somaPositivos += n;
-            } else{
+            } else {
                 qtdNegativos++;
                 somaNegativos += n;
             }
@@ -212,8 +212,45 @@ public class main {
     public static int ler7() {
         return Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um número de cada vez:"));
     }
-    public static void exibir7(int qtdPares, int somaPares, int qtdImpares, int somaImpares, int qtdPositivos, int somaPositivos, int qtdNegativos, int somaNegativos) {
-        JOptionPane.showMessageDialog(null, "Quantidade de números pares: " + qtdPares + "\nSoma dos números pares: " + somaPares + "\nQuantidade de números ímpares: " + qtdImpares + "\nSoma dos números ímpares: " + somaImpares + "\nQuantidade de números positivos: " + qtdPositivos + "\nSoma dos números positivos: " + somaPositivos + "\nQuantidade de números negativos: " + qtdNegativos + "\nSoma dos números negativos: " + somaNegativos);
+
+    public static void exibir7(int qtdPares, int somaPares, int qtdImpares, int somaImpares, int qtdPositivos,
+            int somaPositivos, int qtdNegativos, int somaNegativos) {
+        JOptionPane.showMessageDialog(null,
+                "Quantidade de números pares: " + qtdPares + "\nSoma dos números pares: " + somaPares
+                        + "\nQuantidade de números ímpares: " + qtdImpares + "\nSoma dos números ímpares: "
+                        + somaImpares + "\nQuantidade de números positivos: " + qtdPositivos
+                        + "\nSoma dos números positivos: " + somaPositivos + "\nQuantidade de números negativos: "
+                        + qtdNegativos + "\nSoma dos números negativos: " + somaNegativos);
+    }
+
+    // EXE08
+    public static void exe8() {
+        int n = ler8();
+
+        if (n > 1) {
+            boolean isPrimo = true;
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    isPrimo = false;
+                    break;
+                }
+            }
+            exibir8(n, isPrimo);
+        } else {
+            JOptionPane.showMessageDialog(null, n + " o numero deve ser maior que 1 para ser considerado primo!");
+        }
+    }
+
+    public static int ler8() {
+        return Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um número:"));
+    }
+
+    public static void exibir8(int n, boolean isPrimo) {
+        if (isPrimo) {
+            JOptionPane.showMessageDialog(null, n + " é primo!");
+        } else {
+            JOptionPane.showMessageDialog(null, n + " não é primo!");
+        }
     }
 
     // EXE09
@@ -238,6 +275,8 @@ public class main {
         JOptionPane.showMessageDialog(null, "O fatorial de " + n + " é: " + calcularFatorial9(n));
     }
 
+    //EXE10
+    
     public static void main(String[] args) {
         int op;
         do {
@@ -268,11 +307,12 @@ public class main {
                 case 3 -> exe3();
                 case 4 -> exe4();
                 case 5 -> exe5();
-                case 6 -> exe6(); 
-                case 7 -> exe7();
+                case 6 -> exe6();
+                case 7 -> exe7(); 
+                case 8 -> exe8();
+                case 9 -> exe9();
                 /*
-                 * case 8 -> exe8();
-                 * case 9 -> exe9();
+                 * 
                  * case 10 -> exe10();
                  * case 11 -> exe11();
                  * case 12 -> exe12();
