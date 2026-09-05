@@ -1,0 +1,405 @@
+/* ==========================================================================
+   1. SISTEMA DE DESIGN & VARIÁVEIS GLOBAGENS
+   ========================================================================== */
+:root {
+    /* Cores de Fundo e Superfícies */
+    --bg-body: #0f172a;
+    --bg-card: rgba(30, 41, 59, 0.75);
+    --bg-card-hover: rgba(30, 41, 59, 0.95);
+    
+    /* Cores de Destaque */
+    --primary: #38bdf8;
+    --primary-glow: rgba(56, 189, 248, 0.25);
+    --accent: #10b981;
+    --accent-glow: rgba(16, 185, 129, 0.3);
+    
+    /* Tipografia e Textos */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    
+    /* Bordas e Detalhes */
+    --border: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(56, 189, 248, 0.4);
+    
+    /* Sombras */
+    --shadow-card: 0 4px 20px -5px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px var(--primary-glow);
+    
+    /* Transições */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Reset Global e Enquadramento Rígido de Tela */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden; /* Elimina a barra de rolagem */
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    line-height: 1.3;
+}
+
+/* ==========================================================================
+   2. ELEMENTOS DE AMBIENTAÇÃO (BACKGROUND GLOW)
+   ========================================================================== */
+.bg-glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.12;
+}
+
+.bg-glow-1 { top: -100px; left: -100px; background: #0284c7; }
+.bg-glow-2 { bottom: -100px; right: -100px; background: #0d9488; }
+
+/* ==========================================================================
+   3. CABEÇALHO COMPACTO
+   ========================================================================== */
+.header {
+    padding: 0.6rem 1.5rem 0.2rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.header-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Badge Votação em Andamento */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: var(--accent);
+    padding: 0.15rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 var(--accent-glow);
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--accent-glow); }
+    70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.header h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    margin: 0;
+}
+
+/* Barra de Estatísticas Compacta */
+.stats-bar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.25rem 1rem;
+    gap: 1.25rem;
+    margin-top: 0.1rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-divider {
+    width: 1px;
+    height: 14px;
+    background-color: var(--border);
+}
+
+/* ==========================================================================
+   4. CONTAINER & GRID (3x2 OTIMIZADO)
+   ========================================================================== */
+.container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.4rem 1.5rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 0; /* Permite encolher proporcionalmente */
+}
+
+.candidates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+/* ==========================================================================
+   5. CARDS DOS CANDIDATOS COMPACTOS
+   ========================================================================== */
+.candidate-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.6rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s var(--ease-out), 
+                border-color 0.3s var(--ease-out), 
+                box-shadow 0.3s var(--ease-out),
+                background 0.3s var(--ease-out);
+    min-height: 0;
+}
+
+.candidate-card:hover {
+    transform: translateY(-3px);
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+/* Cabeçalho do Card */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.candidate-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: rgba(56, 189, 248, 0.1);
+    padding: 0.1rem 0.45rem;
+    border-radius: 6px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.party-tag {
+    font-size: 0.68rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Imagem Fluida */
+.img-container {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    min-height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0.35rem;
+    background-color: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.candidate-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.4s var(--ease-out);
+}
+
+.img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.1) 70%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0.4rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.vote-prompt {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--accent);
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px var(--accent-glow);
+    transform: translateY(6px);
+    transition: transform 0.25s var(--ease-bounce);
+}
+
+.img-container:hover .candidate-img {
+    transform: scale(1.06);
+}
+
+.img-container:hover .img-overlay {
+    opacity: 1;
+}
+
+.img-container:hover .vote-prompt {
+    transform: translateY(0);
+}
+
+.candidate-img:active {
+    transform: scale(0.96);
+}
+
+.candidate-img:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Info */
+.candidate-info {
+    text-align: center;
+    margin-bottom: 0.35rem;
+}
+
+.candidate-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.candidate-role {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+/* Caixa de Votos */
+.vote-box {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.3rem 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vote-label {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.vote-counter {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    padding: 0.05rem 0.6rem;
+    border-radius: 6px;
+    min-width: 2.2rem;
+    text-align: center;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   6. RODAPÉ COMPACTO
+   ========================================================================== */
+.footer {
+    text-align: center;
+    padding: 0.35rem 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE (Ajuste automático para telas baixas/móveis)
+   ========================================================================== */
+@media (max-height: 680px) {
+    .subtitle, .stats-bar {
+        display: none; /* Oculta textos secundários se a tela for verticalmente muito pequena */
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        height: auto;
+        max-height: none;
+        overflow-y: auto; /* Em celulares/telas estreitas habilita rolar se necessário */
+    }
+    .candidates-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-rows: auto;
+    }
+}

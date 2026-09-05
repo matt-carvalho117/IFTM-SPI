@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Eleitoral - Eleições Presidenciais</title>
+
+    <!-- Google Fonts: Outfit (Títulos) e Inter (Corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Script JS -->
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Fundo Decorativo com Gradientes Suaves -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Cabeçalho Principal -->
+    <header class="header">
+        <div class="header-container">
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                Votação em Andamento
+            </div>
+            <h1>Eleições Presidenciais</h1>
+            <p class="subtitle">Clique na foto do seu candidato para confirmar seu voto de forma rápida e segura.</p>
+
+            <!-- Painel de Informações Rápidas -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">Urnas Apuradas</span>
+                    <span class="stat-value">100%</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">Sistema</span>
+                    <span class="stat-value">Criptografado</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">Total de Candidatos</span>
+                    <span class="stat-value">6</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Grade de Candidatos -->
+    <main class="container">
+        <section class="candidates-grid">
+
+            <!-- Candidato 1 -->
+            <article class="candidate-card">
+                <div class="card-header">
+                    <span class="candidate-number">Nº 11</span>
+                    <span class="party-tag">Partido A</span>
+                </div>
+
+                <div class="img-container">
+                    <img src="./assets/images (4).jpg" alt="Foto do Candidato 1" id="btnIncrementar1" class="candidate-img" tabindex="0" role="button" aria-label="Votar no Candidato 1">
+                    <div class="img-overlay">
+                        <span class="vote-prompt">Clique para Votar</span>
+                    </div>
+                </div>
+
+                <div class="candidate-info">
+                    <h2 class="candidate-name">Candidato 1</h2>
+                    <p class="candidate-role">Presidência da República</p>
+                </div>
+
+                <div class="vote-box">
+                    <span class="vote-label">Votos Computados</span>
+                    <div class="vote-counter">
+                        <span id="votosCand1">0</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Candidato 2 -->
+            <article class="candidate-card">
+                <div class="card-header">
+                    <span class="candidate-number">Nº 22</span>
+                    <span class="party-tag">Partido B</span>
+                </div>
+
+                <div class="img-container">
+                    <img src="./assets/images (5).jpg" alt="Foto do Candidato 2" id="btnIncrementar2" class="candidate-img" tabindex="0" role="button" aria-label="Votar no Candidato 2">
+                    <div class="img-overlay">
+                        <span class="vote-prompt">Clique para Votar</span>
+                    </div>
+                </div>
+
+                <div class="candidate-info">
+                    <h2 class="candidate-name">Candidato 2</h2>
+                    <p class="candidate-role">Presidência da República</p>
+                </div>
+
+                <div class="vote-box">
+                    <span class="vote-label">Votos Computados</span>
+                    <div class="vote-counter">
+                        <span id="votosCand2">0</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Candidato 3 -->
+            <article class="candidate-card">
+                <div class="card-header">
+                    <span class="candidate-number">Nº 30</span>
+                    <span class="party-tag">Partido C</span>
+                </div>
+
+                <div class="img-container">
+                    <img src="./assets/images.jpg" alt="Foto do Candidato 3" id="btnIncrementar3" class="candidate-img" tabindex="0" role="button" aria-label="Votar no Candidato 3">
+                    <div class="img-overlay">
+                        <span class="vote-prompt">Clique para Votar</span>
+                    </div>
+                </div>
+
+                <div class="candidate-info">
+                    <h2 class="candidate-name">Candidato 3</h2>
+                    <p class="candidate-role">Presidência da República</p>
+                </div>
+
+                <div class="vote-box">
+                    <span class="vote-label">Votos Computados</span>
+                    <div class="vote-counter">
+                        <span id="votosCand3">0</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Candidato 4 -->
+            <article class="candidate-card">
+                <div class="card-header">
+                    <span class="candidate-number">Nº 45</span>
+                    <span class="party-tag">Partido D</span>
+                </div>
+
+                <div class="img-container">
+                    <img src="./assets/images (1).jpg" alt="Foto do Candidato 4" id="btnIncrementar4" class="candidate-img" tabindex="0" role="button" aria-label="Votar no Candidato 4">
+                    <div class="img-overlay">
+                        <span class="vote-prompt">Clique para Votar</span>
+                    </div>
+                </div>
+
+                <div class="candidate-info">
+                    <h2 class="candidate-name">Candidato 4</h2>
+                    <p class="candidate-role">Presidência da República</p>
+                </div>
+
+                <div class="vote-box">
+                    <span class="vote-label">Votos Computados</span>
+                    <div class="vote-counter">
+                        <span id="votosCand4">0</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Candidato 5 -->
+            <article class="candidate-card">
+                <div class="card-header">
+                    <span class="candidate-number">Nº 50</span>
+                    <span class="party-tag">Partido E</span>
+                </div>
+
+                <div class="img-container">
+                    <img src="./assets/images (2).jpg" alt="Foto do Candidato 5" id="btnIncrementar5" class="candidate-img" tabindex="0" role="button" aria-label="Votar no Candidato 5">
+                    <div class="img-overlay">
+                        <span class="vote-prompt">Clique para Votar</span>
+                    </div>
+                </div>
+
+                <div class="candidate-info">
+                    <h2 class="candidate-name">Candidato 5</h2>
+                    <p class="candidate-role">Presidência da República</p>
+                </div>
+
+                <div class="vote-box">
+                    <span class="vote-label">Votos Computados</span>
+                    <div class="vote-counter">
+                        <span id="votosCand5">0</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Candidato 6 -->
+            <article class="candidate-card">
+                <div class="card-header">
+                    <span class="candidate-number">Nº 65</span>
+                    <span class="party-tag">Partido F</span>
+                </div>
+
+                <div class="img-container">
+                    <img src="./assets/images (3).jpg" alt="Foto do Candidato 6" id="btnIncrementar6" class="candidate-img" tabindex="0" role="button" aria-label="Votar no Candidato 6">
+                    <div class="img-overlay">
+                        <span class="vote-prompt">Clique para Votar</span>
+                    </div>
+                </div>
+
+                <div class="candidate-info">
+                    <h2 class="candidate-name">Candidato 6</h2>
+                    <p class="candidate-role">Presidência da República</p>
+                </div>
+
+                <div class="vote-box">
+                    <span class="vote-label">Votos Computados</span>
+                    <div class="vote-counter">
+                        <span id="votosCand6">0</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Rodapé Informativo -->
+    <footer class="footer">
+        <p>© 2026 Sistema Eleitoral Simulado • Justiça Eleitoral Digital</p>
+    </footer>
+</body>
+
+</html>
