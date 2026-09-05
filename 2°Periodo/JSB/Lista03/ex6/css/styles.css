@@ -1,0 +1,8 @@
+form>div {
+    margin: 15px 0px;
+}
+
+form div:nth-of-type(3) input{
+    margin: 0px 5px;
+}
+
