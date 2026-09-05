@@ -37,6 +37,10 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
 |-------|-------------|-----------|
 | **PWE** | Projeto Web Estático | Disciplina focada em HTML, CSS e estrutura de páginas web estáticas |
 | **FSI** | Fundamentos de Sistemas para Internet | Disciplina que cobre conceitos fundamentais de web, arquitetura MVC e persistência de dados |
+| **LDP** | Lógica de Programação | Disciplina focada na lógica básica de programação em Java |
+| **JSB** | JavaScript Básico | Disciplina que aborda os conceitos básicos de JS para web |
+| **POO** | Programação Orientada a Objeto | Disciplina que aborda o conceito de POO em Java |
+| **PSW** | Projeto Sistema Web | Disciplina que aborda o conceito MVC em projetos Java SQL |
 
 ---
 
