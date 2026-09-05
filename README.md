@@ -23,6 +23,7 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
 - ✅ Implementar padrões de design (MVC, Repository)
 - ✅ Garantir segurança em aplicações web
 - ✅ Desenvolver boas práticas de programação
+
 ## 💻 Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica de documentos web
@@ -30,6 +31,7 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
 - **PHP**: Backend e lógica de negócios
 - **MySQL**: Persistência de dados
 - **JavaScript**: Interatividade e dinâmica
+- **Java**: Programação orientada a objetos
 
 ## 📁 Glossário
 
@@ -39,7 +41,7 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
 | **FSI** | Fundamentos de Sistemas para Internet | Disciplina que cobre conceitos fundamentais de web, arquitetura MVC e persistência de dados |
 | **LDP** | Lógica de Programação | Disciplina focada na lógica básica de programação em Java |
 | **JSB** | JavaScript Básico | Disciplina que aborda os conceitos básicos de JS para web |
-| **POO** | Programação Orientada a Objeto | Disciplina que aborda o conceito de POO em Java |
+| **POO1** | Programação Orientada a Objeto | Disciplina que aborda o conceito de POO em Java |
 | **PSW** | Projeto Sistema Web | Disciplina que aborda o conceito MVC em projetos Java SQL |
 
 ---
@@ -47,40 +49,54 @@ Este repositório é um portfólio de aprendizado que demonstra a progressão no
 ## 📚 Estrutura do repositório
 
 ```
-1°Periodo/
+IFTM-SPI/
 │
-├── PWE/
-│   ├── aulas/
-│   │   ├── (Exercícios feitos durante as aulas)
+├── README.md
+├── index.html
+│
+├── 1°Periodo/
 │   │
-│   └── listas/
-│       ├── (Listas de exercícios progressivas (09, 10, 14...))
+│   ├── PWE/
+│   │   ├── aulas/
+│   │   │   └── (Exercícios feitos durante as aulas)
+│   │   │
+│   │   ├── listas/
+│   │   │   └── (Listas de exercícios progressivas)
+│   │   │
+│   │   └── Projeto-Final/
+│   │       └── (Projeto final da disciplina)
+│   │
+│   ├── FSI/
+│   │   └── cadastro-alunos/
+│   │           └── (Projeto PHP de cadastro de alunos)
+│   │
+│   └── LDP/
+│       └── main.java (Projeto final de lógica de programação)
 │
-└── FSI/
-    └── cadastro-alunos/
-        ├── public/
-        │   ├── index.php (Interface de listagem)
-        │   └── salvar_contato.php (Processamento de requisições)
+└── 2°Periodo/
+    │
+    ├── JSB/
+    │   ├── aulas/
+    │   │   └── (Exercícios de aula)
+    │   │
+    │   ├── Lista01/
+    │   ├── Lista02/
+    │   └── Lista03/
+    │
+    ├── POO1/
+    │   └── Listas/
+    │       └── (Exercícios de programação orientada a objetos)
+    │
+    └── PSW/
+        ├── condominio/
+        │   └── (Projeto de sistema web - condomínio)
         │
-        ├── config/
-        │   ├── Database.php (Conexão PDO com MySQL)
-        │   └── bootstrap.php (Inicialização da aplicação)
-        │
-        ├── app/
-        │   ├── Controllers/
-        │   │   └── ContatoController.php (Orquestração de requisições)
-        │   │
-        │   ├── Services/
-        │   │   └── ContatoService.php (Validação e regras de negócio)
-        │   │
-        │   └── Repositories/
-        │       └── ContatoRepository.php (Acesso a dados com Prepared Statements)
-        │
-        └── database/
-            └── schema.sql (Estrutura do banco de dados)
+        └── demo/
+            └── (Projeto de demonstração)
 ```
 
 ---
+
 ## 🌐 Acesso aos Projetos
 
 Os projetos estão publicados em **GitHub Pages**:
@@ -88,11 +104,12 @@ Os projetos estão publicados em **GitHub Pages**:
 
 ## 🏷️ Tópicos
 
-`html5` • `css3` • `layout` • `webdesign` • `php` • `mvc` • `mysql`
+`html5` • `css3` • `layout` • `webdesign` • `php` • `mvc` • `mysql` • `javascript` • `java` • `poo`
 
-## Em desenvovimento por:
+## Em desenvolvimento por:
 
 [@matt-carvalho117](https://github.com/matt-carvalho117)
+
 > "*Through Knowledge, Victory. Through Unity, Peace.*  
 > *Honor, Valor, Allegiance.*  
 > *Today. Tomorrow. Forever.*  
