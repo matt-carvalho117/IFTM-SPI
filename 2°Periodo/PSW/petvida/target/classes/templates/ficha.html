@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha do Animal</title>
+</head>
+<body>
+    <h1>Ficha do Animal</h1>
+    
+    <div th:if="${animal != null}">
+        <p><strong>Nome:</strong> <span th:text="${animal.nome}"></span></p>
+        <p><strong>Espécie:</strong> <span th:text="${animal.especie}"></span></p>
+        <p><strong>Idade:</strong> <span th:text="${animal.idade}"></span> anos</p>
+        
+        <hr>
+        <h2>Dados do Tutor</h2>
+        <!-- Acessando o objeto Tutor que foi preenchido pelo JOIN no repository -->
+        <p><strong>Tutor:</strong> <span th:text="${animal.tutor.nome}"></span></p>
+        <p><strong>Telefone:</strong> <span th:text="${animal.tutor.telefone}"></span></p>
+    </div>
+    
+    <div th:if="${animal == null}">
+        <p>Animal não encontrado.</p>
+    </div>
+</body>
+</html>

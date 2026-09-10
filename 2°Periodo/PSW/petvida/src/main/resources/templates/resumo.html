@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumo da Clínica</title>
+</head>
+<body>
+    <h1>Resumo Geral da Clínica</h1>
+    
+    <ul>
+        <li><strong>Total de Animais:</strong> <span th:text="${totalAnimais}"></span></li>
+        
+        <!-- Formatação da média para 2 casas decimais usando vírgula (padrão PT-BR) -->
+        <li>
+            <strong>Média de Idade:</strong> 
+            <span th:text="${#numbers.formatDecimal(mediaIdade, 1, 2, 'COMMA')}"></span> anos
+        </li>
+        
+        <li><strong>Animal Mais Velho:</strong> <span th:text="${animalMaisVelho}"></span></li>
+    </ul>
+
+    <hr>
+    <p><em>Página gerada em: <span th:text="${dataHora}"></span></em></p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha do Tutor</title>
+</head>
+<body>
+    <h1>Ficha do Tutor</h1>
+    
+    <div th:if="${tutor != null}">
+        <p><strong>Nome:</strong> <span th:text="${tutor.nome}"></span></p>
+        <p><strong>Telefone:</strong> <span th:text="${tutor.telefone}"></span></p>
+        <p><strong>Quantidade de Animais:</strong> <span th:text="${quantidadeAnimais}"></span></p>
+    </div>
+    
+    <div th:if="${tutor == null}">
+        <p>Tutor não encontrado.</p>
+    </div>
+</body>
+</html>
