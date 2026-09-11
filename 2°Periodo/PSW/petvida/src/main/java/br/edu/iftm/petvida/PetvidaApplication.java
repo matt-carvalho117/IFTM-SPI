@@ -5,6 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import br.edu.iftm.petvida.model.Animal;
+import br.edu.iftm.petvida.model.Tutor;
+import br.edu.iftm.petvida.repository.AnimalRepository;
+import br.edu.iftm.petvida.repository.TutorRepository;
+
 @SpringBootApplication
 public class PetvidaApplication {
 
