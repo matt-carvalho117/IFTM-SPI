@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+#cadastroCracha, #resultado{
+    display: flex;
+    flex-direction: column;
+    
+}
+.cadastro > div{
+    width: 350px;
+    margin: 30px;
+}
+img{
+    width: 200px;
+    height: 230px;
+}
+#cadastroCracha{
+    margin: 20px 0px;
+}
+#resultado{
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    gap: 20px;
+}
+#cargoResultado{
+    font-weight: bold;
+}

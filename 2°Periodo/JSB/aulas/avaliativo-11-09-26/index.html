@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main>
+        <section class="cadastro">
+            <div>
+                <h2>Cadastro do Crachá</h2>
+                <form action="" id="cadastroCracha">
+                    <label for="primeiroNome">Primeiro Nome:</label>
+                    <input type="text" id="primeiroNome" value="Matheus">
+                    <label for="segundoNome">Restante do Nome:</label>
+                    <input type="text" id="segundoNome" value="Carvalho Roldao Souza">
+                    <label for="cargo">Cargo (Professor ou Desenvolvedor)</label>
+                    <input type="text" id="cargo" value="Professor">
+                    <label>Escolha o Minicurso:</label>
+                    <div>
+                        <input type="button" value="HTML5" id="btnHtml">
+                        <input type="button" value="CSS3" id="btnCss">
+                        <input type="button" value="JavaScript" id="btnJs">
+                    </div>
+
+                </form>
+                <h2>Crachá Gerado</h2>
+                <div id="resultado">
+                    <h3 id="nomeMaiusculo"></h3>
+                    <p id="sigla"></p>
+                    <span id="imgCurso"></span>
+                    <p id="cargoResultado"></p>
+                    <p id="sala"></p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+</body>
+
+</html>

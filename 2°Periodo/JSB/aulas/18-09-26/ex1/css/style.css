@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 400px;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid black;
+    transition: all 0.2s;
+}
+input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+input[type="button"]:active{
+    transform: scale(0.9);
+}
