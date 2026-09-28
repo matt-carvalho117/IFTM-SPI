@@ -8,4 +8,5 @@ btnLogin = document.getElementById('login').addEventListener("click", function l
     localStorage.setItem("login", JSON.stringify(logins));
     user.value = "";
     pass.value = "";
+    alert("Usuário cadastrado com sucesso!");
 });
