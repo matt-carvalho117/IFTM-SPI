@@ -11,6 +11,18 @@ public class Vendas {
         this.quantidadeVendida = quantidadeVendida;
     }
 
+    public double getValorTotalVenda() {
+        return valorTotalVenda;
+    }
+
+    public static double getTotalVendasMes() {
+        return totalVendasMes;
+    }
+
+    public int getQuantidadeVendida() {
+        return quantidadeVendida;
+    }
+    
     public boolean processarVenda(Produto produto) throws Exception {
         if (produto == null) {
             return false;
@@ -23,11 +35,11 @@ public class Vendas {
             } else {
                 this.valorTotalVenda = valorBase;
             }
-            
+
             produto.setQuantidadeEstoque(produto.getQuantidadeEstoque() - this.quantidadeVendida);
-            
+
             totalVendasMes += this.valorTotalVenda;
-            
+
             return true;
         }
 

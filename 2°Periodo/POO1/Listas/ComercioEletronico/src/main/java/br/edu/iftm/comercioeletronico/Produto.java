@@ -12,9 +12,11 @@ public class Produto {
         this.nome = nome;
         setQuantidadeEstoque(quantidadeInicial);
         setPrecoUnitario(precoUnitario);
+        this.promocao = false;
+        totalProdutosCadastrados++;
     }
 
-    public void setQuantidadeEstoque(int quantidadeEstoque) throws Exception{
+    public void setQuantidadeEstoque(int quantidadeEstoque) throws Exception {
         if (quantidadeEstoque >= 0) {
             this.quantidadeEstoque = quantidadeEstoque;
         } else {
@@ -22,12 +24,16 @@ public class Produto {
         }
     }
 
-    public void setPrecoUnitario(double precoUnitario) throws Exception{
+    public void setPrecoUnitario(double precoUnitario) throws Exception {
         if (precoUnitario > 0) {
             this.precoUnitario = precoUnitario;
         } else {
             throw new Exception("O valor do preço não deve ser menor ou igual a zero.");
         }
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public int getQuantidadeEstoque() {
@@ -41,5 +47,14 @@ public class Produto {
     public boolean isPromocao() {
         return promocao;
     }
+
+    public void setPromocao(boolean promocao) {
+        this.promocao = promocao;
+    }
     
+
+    public static int getTotalProdutosCadastrados() {
+        return totalProdutosCadastrados;
+    }
+
 }
