@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" defer></script>
+    <script src="js/jMaskWiFi/js/jMaskWiFi.js"></script>
+    <title>Regex</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div>
+                <form action="">
+                    <label for="dataNasc">Data de Nascimento</label>
+                    <br>
+                    <input type="text" id="dataNasc" value="11/11/1111">
+                    <input type="button" value="Validar" id="btnValidar1">
+
+                    <br>
+                    <br>
+
+                    <label for="cpfMascara">CPF</label>
+                    <br>
+                    <input type="text" id="cpfMascara" onkeypress="inserirMascara('cpfMascara', '000.000.000-00')"
+                        value="123.456.789-11">
+                    <input type="button" value="Validar" id="btnValidar2">
+
+                    <br>
+                    <br>
+
+                    <label for="matricula">Número de matrícula de um aluno</label>
+                    <br>
+                    <input type="text" id="matricula" value="IFTM-123/456-ab">
+                    <input type="button" value="Validar" id="btnValidar3">
+
+                    <br>
+                    <br>
+
+                    <label for="codigoDisciplina1">Código de uma disciplina do IFTM (1)</label>
+                    <br>
+                    <input type="text" id="codigoDisciplina1"
+                        onkeypress="inserirMascara('codigoDisciplina1', 'yy-00.000-yyyy')" value="MT-12.345-IFTM">
+                    <input type="button" value="Validar" id="btnValidar4">
+
+                    <br>
+                    <br>
+
+                    <label for="codigoDisciplina2">Código de uma disciplina do IFTM (2)</label>
+                    <br>
+                    <input type="text" id="codigoDisciplina2"
+                        onkeypress="inserirMascara('codigoDisciplina2', 'yy-00.000-yyyy')" value="MT-12.345-IFTM">
+                    <input type="button" value="Validar" id="btnValidar5">
+
+                    <br>
+                    <br>
+
+                    <label for="codigoDisciplina3">Código de uma disciplina do IFTM (3)</label>
+                    <br>
+                    <input type="text" id="codigoDisciplina3" value="MT-12.345-IFTM">
+                    <input type="button" value="Validar" id="btnValidar6">
+
+                    <br>
+                    <br>
+
+                    <label for="nomeCampus">Nome de campus do IFTM</label>
+                    <br>
+                    <input type="text" id="nomeCampus" value="IFTM campus Uberlândia">
+                    <input type="button" value="Validar" id="btnValidar7">
+
+                    <br>
+                    <br>
+
+                    <label for="telefone1">Telefone (1)</label>
+                    <br>
+                    <input type="text" id="telefone1" onkeypress="inserirMascara('telefone1', '+yy(xx)xxxxx-xxxx')"
+                        value="+55(11)12345-1234">
+                    <input type="button" value="Validar" id="btnValidar8">
+
+                    <br>
+                    <br>
+
+                    <label for="telefone2">Telefone (2)</label>
+                    <br>
+                    <input type="text" id="telefone2" value="(11) 12345-1234">
+                    <input type="button" value="Validar" id="btnValidar9">
+
+                    <br>
+                    <br>
+
+                    <label for="altura">Altura</label>
+                    <br>
+                    <input type="text" id="altura" value="1.50">
+                    <input type="button" value="Validar" id="btnValidar10">
+
+                    <br>
+                    <br>
+
+                    <label for="faturamento">Faturamento anual de uma empresa</label>
+                    <br>
+                    <input type="text" id="faturamento" value="R$1.500,20">
+                    <input type="button" value="Validar" id="btnValidar11">
+
+                    <br>
+                    <br>
+
+                    <label for="cronometro">Cronometro</label>
+                    <br>
+                    <input type="text" id="cronometro" value="HH:MM:SS:CC">
+                    <input type="button" value="Validar" id="btnValidar12">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
